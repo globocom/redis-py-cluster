@@ -28,7 +28,7 @@ setup(
     maintainer='Johan Andersson',
     maintainer_email='Grokzen@gmail.com',
     packages=["rediscluster"],
-    url='http://github.com/grokzen/redis-py-cluster',
+    url='https://github.com/globocom/redis-py-cluster',
     license='MIT',
     install_requires=[
         'redis>=2.10.2'

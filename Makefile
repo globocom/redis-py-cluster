@@ -394,3 +394,10 @@ ptp:
 	python ptp-debug.py
 
 .PHONY: test
+
+release:
+	python setup.py sdist upload
+
+release_globo:
+	      python setup.py sdist register -r ipypiglobo
+	      python setup.py sdist register -r pypiglobo

@@ -182,7 +182,8 @@ def parse_cluster_nodes(resp, **options):
         self_id, addr, flags, master_id, ping_sent, \
             pong_recv, config_epoch, link_state = parts[:8]
 
-        host, port = addr.rsplit(':', 1)
+        host, ports = addr.rsplit(':', 1)
+        port, _, cluster_port = ports.partition('@')
 
         node = {
             'id': self_id,
